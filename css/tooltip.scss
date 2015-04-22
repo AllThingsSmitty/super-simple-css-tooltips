@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,600,700);
+
+$pink: #e91e63;
+$paper: #efefef;
+$clouds: #ecf0f1;
+$teal: #009688;
+$yellow: #ffeb3b;
+$cubic: cubic-bezier(.64,.09,.08,1);
+
+html, body {
+  background: $clouds;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+h1 {
+  background: $pink;
+  color: $paper;
+  font-size: 26px;
+  margin-bottom: 50px;
+  padding: 40px 0 40px 20%;
+}
+h2 {
+  color: $pink;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+body > div {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  margin-left: 20%;
+  padding: 20px;
+  width: 60%;
+  &:last-of-type {
+    margin-bottom: 100px;
+  }
+}
+p {
+  display: inline;
+  margin-right: 50px;
+}
+a {
+  color: #03a9f4;
+}
+button {
+  background: rgb(122,188,255);
+  background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1)));
+  background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%);
+  border: 1px solid #1d6dc1;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;  
+  text-shadow: 0 -1px 0 #1D6DC1;
+}
+[class^="tooltip"] {
+  position: relative;
+  &:after {
+    background: #999;
+    border-radius: 2px;
+    color: #fff;
+    content: attr(data-tooltip);
+    left: 50%;
+    opacity: 0;
+    padding: 6px 10px;
+    position: absolute;
+    top: 1.4em;
+    transform: translateX(-50%) translateY(-2px);
+    transition: opacity 0.2s $cubic, transform 0.2s $cubic;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  &:hover {
+    &:after {
+      display: block;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      visibility: visible;
+    }
+  }
+}
+.tooltip--left {
+  &:after {
+    left: 0;
+    top: -4px;
+    transform: translateX(-112%) translateY(0);
+  }
+  &:hover {
+    &:after {
+      transform: translateX(-110%) translateY(0);
+    }
+  }
+}
+.tooltip--right {
+  &:after {
+    left: 100%;
+    top: -4px;
+    transform: translateX(12%) translateY(0);
+  }
+  &:hover {
+    &:after {
+      transform: translateX(10%) translateY(0);
+    }
+  }
+}
+.tooltip--triangle {
+  &:before {
+    border-bottom: solid 5px #999;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    content: "";
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 1.1em;
+    transform: translateX(-50%) translateY(-2px);
+    transition: opacity 0.2s $cubic, transform 0.2s $cubic;
+    visibility: hidden;
+    width: 0;
+    z-index: 3;
+  }
+  &:hover {
+    &:before {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
