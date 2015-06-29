@@ -3,8 +3,6 @@
 $pink: #e91e63;
 $paper: #efefef;
 $clouds: #ecf0f1;
-$teal: #009688;
-$yellow: #ffeb3b;
 $cubic: cubic-bezier(.64,.09,.08,1);
 
 html, body {
@@ -31,8 +29,8 @@ body > div {
   background: #fff;
   border-radius: 2px;
   box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2);
-  margin-left: 20%;
   margin-bottom: 30px;
+  margin-left: 20%;
   padding: 20px;
   width: 60%;
   &:last-of-type {
@@ -53,8 +51,6 @@ a {
 }
 button {
   background: rgb(122,188,255);
-  background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1)));
   background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%);
   border: 1px solid #1d6dc1;
   border-radius: 5px;
@@ -63,7 +59,6 @@ button {
   padding: 10px 15px;  
   text-shadow: 0 -1px 0 #1d6dc1;
 }
-
 [class^="tooltip"] {
   position: relative;
   &:after {
@@ -76,7 +71,9 @@ button {
     padding: 6px 10px;
     position: absolute;
     top: 1.4em;
+    -webkit-transform: translateX(-50%) translateY(-2px);
     transform: translateX(-50%) translateY(-2px);
+    transition: opacity 0.2s $cubic, -webkit-transform 0.2s $cubic;
     transition: opacity 0.2s $cubic, transform 0.2s $cubic;
     visibility: hidden;
     white-space: nowrap;
@@ -86,6 +83,7 @@ button {
     &:after {
       display: block;
       opacity: 1;
+      -webkit-transform: translateX(-50%) translateY(0);
       transform: translateX(-50%) translateY(0);
       visibility: visible;
     }
@@ -95,10 +93,12 @@ button {
   &:after {
     left: 0;
     top: -4px;
+    -webkit-transform: translateX(-112%) translateY(0);
     transform: translateX(-112%) translateY(0);
   }
   &:hover {
     &:after {
+      -webkit-transform: translateX(-110%) translateY(0);
       transform: translateX(-110%) translateY(0);
     }
   }
@@ -107,10 +107,12 @@ button {
   &:after {
     left: 100%;
     top: -4px;
+    -webkit-transform: translateX(12%) translateY(0);
     transform: translateX(12%) translateY(0);
   }
   &:hover {
     &:after {
+      -webkit-transform: translateX(10%) translateY(0);
       transform: translateX(10%) translateY(0);
     }
   }
@@ -120,13 +122,15 @@ button {
     border-bottom: 5px solid #999;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    content: '';
+    content: "";
     height: 0;
     left: 50%;
     opacity: 0;
     position: absolute;
     top: 1.1em;
+    -webkit-transform: translateX(-50%) translateY(-2px);
     transform: translateX(-50%) translateY(-2px);
+    transition: opacity 0.2s $cubic, -webkit-transform 0.2s $cubic;
     transition: opacity 0.2s $cubic, transform 0.2s $cubic;
     visibility: hidden;
     width: 0;
@@ -136,8 +140,9 @@ button {
     &:before {
       display: block;
       opacity: 1;
-      visibility: visible;
+      -webkit-transform: translateX(-50%) translateY(0);
       transform: translateX(-50%) translateY(0);
+      visibility: visible;
     }
   }
 }
