@@ -7,15 +7,13 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 
 html, body {
   background: $clouds;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   overflow-x: hidden;
   width: 100%;
 }
 * {
   box-sizing: border-box;
-}
-h1, h2, p {
-  font-family: "Roboto", sans-serif;
 }
 h1 {
   background: $pink;
