@@ -21,5 +21,5 @@ The CSS creates a tooltip specific to the element's `data-tooltip` attribute.
 ```
 ###Links
 ```html
-<a href="https://github.com/AllThingsSmitty/super-simple-css-tooltips" class="tooltip--triangle" data-tooltip="Ha, ha! Yeah boyyy!">Click it, cuz you know you want to!</p>
+<a href="https://github.com/AllThingsSmitty/super-simple-css-tooltips" class="tooltip--triangle" data-tooltip="Ha, ha! Yeah boyyy!">Click it, cuz you know you want to!</a>
 ```
