@@ -1,15 +1,17 @@
 # Super Simple CSS Tooltips
-Easily add a tooltip hover effect to the left, right, and bottom of an element. A second bottom option includes a triangle pointer.
+Easily add a tooltip hover effect to an element. The tooltip hover can be placed to the left, right, and bottom of an element. A second bottom option includes a triangle pointer.s
 
 ![image of tooltip](https://github.com/AllThingsSmitty/super-simple-css-tooltips/blob/master/img/tooltip.png)
 
-###CSS Classes
+##CSS Classes
 * `tooltip--left`
 * `tooltip--right`
 * `tooltip--bottom`
 * `tooltip--triangle`
 
 The CSS creates a tooltip specific to the element's `data-tooltip` attribute. 
+
+##Examples
 
 ###Text
 ```html
@@ -22,4 +24,9 @@ The CSS creates a tooltip specific to the element's `data-tooltip` attribute.
 ###Links
 ```html
 <a href="https://github.com/AllThingsSmitty/super-simple-css-tooltips" class="tooltip--triangle" data-tooltip="Ha, ha! Yeah boyyy!">Click it, cuz you know you want to!</a>
-```
+```s
+
+
+##Support
+
+Current versions of Chrome, Firefox, Safari, Edge, and IE10+.
