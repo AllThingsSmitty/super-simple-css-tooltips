@@ -67,9 +67,7 @@ button {
     padding: 6px 10px;
     position: absolute;
     top: 1.4em;
-    -webkit-transform: translateX(-50%) translateY(-2px);
     transform: translateX(-50%) translateY(-2px);
-    transition: opacity 0.2s $cubic, -webkit-transform 0.2s $cubic;
     transition: opacity 0.2s $cubic, transform 0.2s $cubic;
     visibility: hidden;
     white-space: nowrap;
@@ -79,7 +77,6 @@ button {
     &:after {
       display: block;
       opacity: 1;
-      -webkit-transform: translateX(-50%) translateY(0);
       transform: translateX(-50%) translateY(0);
       visibility: visible;
     }
@@ -89,12 +86,10 @@ button {
   &:after {
     left: 0;
     top: -4px;
-    -webkit-transform: translateX(-112%) translateY(0);
     transform: translateX(-112%) translateY(0);
   }
   &:hover {
     &:after {
-      -webkit-transform: translateX(-110%) translateY(0);
       transform: translateX(-110%) translateY(0);
     }
   }
@@ -103,12 +98,10 @@ button {
   &:after {
     left: 100%;
     top: -4px;
-    -webkit-transform: translateX(12%) translateY(0);
     transform: translateX(12%) translateY(0);
   }
   &:hover {
     &:after {
-      -webkit-transform: translateX(10%) translateY(0);
       transform: translateX(10%) translateY(0);
     }
   }
@@ -124,9 +117,7 @@ button {
     opacity: 0;
     position: absolute;
     top: 1.1em;
-    -webkit-transform: translateX(-50%) translateY(-2px);
     transform: translateX(-50%) translateY(-2px);
-    transition: opacity 0.2s $cubic, -webkit-transform 0.2s $cubic;
     transition: opacity 0.2s $cubic, transform 0.2s $cubic;
     visibility: hidden;
     width: 0;
@@ -136,7 +127,6 @@ button {
     &:before {
       display: block;
       opacity: 1;
-      -webkit-transform: translateX(-50%) translateY(0);
       transform: translateX(-50%) translateY(0);
       visibility: visible;
     }

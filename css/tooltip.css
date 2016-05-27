@@ -63,9 +63,7 @@ button {
   padding: 6px 10px;
   position: absolute;
   top: 1.4em;
-  -webkit-transform: translateX(-50%) translateY(-2px);
   transform: translateX(-50%) translateY(-2px);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   visibility: hidden;
   white-space: nowrap;
@@ -74,28 +72,23 @@ button {
 [class^="tooltip"]:hover:after {
   display: block;
   opacity: 1;
-  -webkit-transform: translateX(-50%) translateY(0);
   transform: translateX(-50%) translateY(0);
   visibility: visible;
 }
 .tooltip--left:after {
   left: 0;
   top: -4px;
-  -webkit-transform: translateX(-112%) translateY(0);
   transform: translateX(-112%) translateY(0);
 }
 .tooltip--left:hover:after {
-  -webkit-transform: translateX(-110%) translateY(0);
   transform: translateX(-110%) translateY(0);
 }
 .tooltip--right:after {
   left: 100%;
   top: -4px;
-  -webkit-transform: translateX(12%) translateY(0);
   transform: translateX(12%) translateY(0);
 }
 .tooltip--right:hover:after {
-  -webkit-transform: translateX(10%) translateY(0);
   transform: translateX(10%) translateY(0);
 }
 .tooltip--triangle:before {
@@ -108,9 +101,7 @@ button {
   opacity: 0;
   position: absolute;
   top: 1.1em;
-  -webkit-transform: translateX(-50%) translateY(-2px);
   transform: translateX(-50%) translateY(-2px);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   visibility: hidden;
   width: 0;
@@ -119,7 +110,6 @@ button {
 .tooltip--triangle:hover:before {
   display: block;
   opacity: 1;
-  -webkit-transform: translateX(-50%) translateY(0);
   transform: translateX(-50%) translateY(0);
   visibility: visible;
 }
